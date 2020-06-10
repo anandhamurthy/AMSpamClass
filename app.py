@@ -5,7 +5,7 @@ import string
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 
-model=pickle.load('model.pkl','rb')
+model=pickle.load(open('model.pkl', 'rb'))
 cv=CountVectorizer()
 
 def remove_pun(msg):
