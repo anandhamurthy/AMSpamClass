@@ -1,11 +1,11 @@
 from flask import Flask
-from sklearn.externals import joblib
+import pickle
 import pandas as pd
 import string
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 
-model=joblib.load('model.pkl','r+')
+model=pickle.load('model.pkl','rb')
 cv=CountVectorizer()
 
 def remove_pun(msg):
